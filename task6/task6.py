@@ -7,16 +7,32 @@
 # 4 4 -> 2 2
 # 5 6 -> 2
 
-sum = 5
-proizvedenie = 6
-result = True
-while result:
-    value1 = int(input('введите число: '))
-    value2 = int(input('введите второе число: '))
-    if value1 + value2 == sum and value1 * value2 == proizvedenie:
-        print()
-        print(f'ура!!! ты отгадал цифры которые я загадал')
-        print(f'{value1}, {value2}')
-        result = False
-    else:
-        print(f'попробуй еще раз \nсумма = {sum} \nпроизведение = {proizvedenie}')
+# sum = 5
+# proizvedenie = 6
+# result = True
+# while result:
+#     value1 = int(input('введите число: '))
+#     value2 = int(input('введите второе число: '))
+#     if value1 + value2 == sum and value1 * value2 == proizvedenie:
+#         print()
+#         print(f'ура!!! ты отгадал цифры которые я загадал')
+#         print(f'{value1}, {value2}')
+#         result = False
+#     else:
+#         print(f'попробуй еще раз \nсумма = {sum} \nпроизведение = {proizvedenie}')
+
+
+
+
+a = int(input('сумма = '))
+b = int(input('произведение цифр = '))
+result = False
+
+for i in range(a):
+    if result:
+        break
+    for j in range(b):
+        if (i + j == a) and (i*j == b):
+            print(i,j)
+            result = True
+            break
