@@ -24,25 +24,25 @@
 #     print('Этот билет к сожалению не счастливый')
 
 
-A = input('введите шестизначный номер билета через пробел: ').split()
-result = 0
-result2 = 0
+A =  input('введите шестизначный номер билета: ')
+temp = []
+# while len(A) != 6:
+#     A = input('введите шестизначный номер билета: ')
+while len(A:=input('введите шестизначный номер билета: ')) !=6:
+    print('ошибка')
 for i in range(len(A)):
-    if len(A) < 6:
-        print('попробуй еще раз, только 6 цифр')
-        break
-    elif len(A) == 6:
-        A[i] = int(A[i])
-        if len(A) <= 3:
-            result = result + A[i]
-            
-        elif len(A) >= 6:
-            result2 = result2 + A[i]
-            
-    else:
-        print('нужно 6 цифр')
-        break
+    temp.append(A[i])
+print(temp)
 
-print(result)
-# print(result2)
 
+result1 = 0
+result2 = 0
+i = 0
+result1 = (sum((int(temp[i]) for i in range(0, 3))))
+result2 = (sum(int(temp[i]) for i in range(3, int(len(temp)))))
+print(result1, result2)
+
+if result1 == result2:
+    print('Ехууу! У меня счастливый билет!!')
+else:
+    print('может в следующий раз повезет =(')
